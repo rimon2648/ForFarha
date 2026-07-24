@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Farha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum-dark: #2a2136;
+    --plum: #372c47;
+    --plum-light: #4a3c5c;
+    --lavender: #b9aecb;
+    --lavender-soft: #d9d1e6;
+    --amber: #e8b75f;
+    --amber-soft: #f3d29a;
+    --blush: #e8b4bc;
+    --paper: #f6f1ee;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--plum-dark);
+    color: var(--paper);
+    font-family:'Work Sans', sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+  .wrap{max-width:640px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    padding:60px 28px;
+    background:
+      radial-gradient(ellipse at 50% 30%, var(--plum-light) 0%, var(--plum) 45%, var(--plum-dark) 100%);
+  }
+  .window{
+    width:120px;
+    height:150px;
+    border:3px solid var(--lavender-soft);
+    border-radius:6px;
+    position:relative;
+    margin-bottom:38px;
+    background: var(--plum-dark);
+    box-shadow: 0 0 0 6px rgba(185,174,203,0.08);
+  }
+  .window::before, .window::after{
+    content:'';
+    position:absolute;
+    background: var(--lavender-soft);
+    opacity:0.4;
+  }
+  .window::before{ /* vertical divider */
+    width:3px; height:100%; left:50%; top:0; transform:translateX(-50%);
+  }
+  .window::after{ /* horizontal divider */
+    height:3px; width:100%; top:50%; left:0; transform:translateY(-50%);
+  }
+  .glow{
+    position:absolute;
+    inset:3px;
+    background: radial-gradient(circle at 50% 65%, var(--amber-soft) 0%, var(--amber) 40%, transparent 75%);
+    opacity:0;
+    animation: flicker-on 3s ease-out forwards;
+    animation-delay: 0.4s;
+    border-radius:3px;
+  }
+  @keyframes flicker-on{
+    0%{opacity:0;}
+    30%{opacity:0.85;}
+    38%{opacity:0.5;}
+    46%{opacity:0.95;}
+    100%{opacity:0.9;}
+  }
+  .hero eyebrow, .eyebrow{
+    display:block;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--lavender);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(1.8rem, 5.5vw, 2.6rem);
+    color:var(--paper);
+    max-width:11ch;
+    margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--amber-soft);
+  }
+  .hero p.sub{
+    color:var(--lavender-soft);
+    font-size:1rem;
+    max-width:38ch;
+  }
+  .scroll-cue{
+    position:absolute;
+    bottom:36px;
+    font-size:0.7rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--lavender);
+    opacity:0.6;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{
+    padding:90px 0;
+    border-top:1px solid rgba(185,174,203,0.15);
+  }
+  section .eyebrow{ color: var(--amber-soft); }
+  section h2{
+    font-size:clamp(1.4rem, 4vw, 1.85rem);
+    margin-bottom:24px;
+    color:var(--paper);
+  }
+  section p{
+    color:var(--lavender-soft);
+    font-size:1.02rem;
+    margin-bottom:16px;
+  }
+  section p:last-child{margin-bottom:0;}
+  strong{color:var(--paper); font-weight:500;}
+
+  /* promise list */
+  .promises{
+    list-style:none;
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .promises li{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+  }
+  .flame{
+    flex-shrink:0;
+    width:26px;
+    height:26px;
+    margin-top:2px;
+    border-radius:50%;
+    background: radial-gradient(circle, var(--amber-soft) 0%, var(--amber) 60%, transparent 80%);
+    box-shadow: 0 0 10px rgba(232,183,95,0.5);
+  }
+  .promises span{
+    color:var(--lavender-soft);
+    font-size:1.02rem;
+  }
+  .promises strong{display:block; margin-bottom:3px;}
+
+  /* boundary section — quieter, more still */
+  .boundary{
+    background: var(--plum);
+  }
+  .boundary blockquote{
+    border-left:2px solid var(--blush);
+    padding-left:20px;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--blush);
+    margin:26px 0;
+  }
+
+  /* closing */
+  .closing{
+    text-align:center;
+    padding-bottom:120px;
+  }
+  .closing h2{
+    max-width:16ch;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .signature{
+    margin-top:48px;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--amber-soft);
+  }
+  .relight{
+    margin-top:56px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .relight .window{
+    margin-bottom:0;
+    cursor:pointer;
+    transform:scale(0.85);
+  }
+  .relight .glow{
+    animation:none;
+    opacity: var(--lit, 0);
+    transition:opacity 0.9s ease;
+  }
+  .relight-label{
+    font-size:0.78rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--lavender);
+  }
+
+  footer{
+    text-align:center;
+    padding:36px 0 48px;
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    color: rgba(185,174,203,0.5);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .glow{animation:none; opacity:0.9;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <span class="eyebrow">for Farha</span>
+    <div class="window"><div class="glow"></div></div>
+    <h1>I let the light go out <em>when you needed it on.</em></h1>
+    <p class="sub">I'm sorry. Not just for going quiet — for what that quiet cost you. Read this all the way through, okay?</p>
+    <span class="scroll-cue">↓ scroll ↓</span>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">What I did</span>
+      <h2>I disappeared, and you were left holding the silence.</h2>
+      <p>When I feel low, my instinct is to shut the door — on you, on everyone — and talk to anyone <em>except</em> the person I actually need to talk to. That's not fair to explain away. It's a pattern I've repeated, and each time, you were the one left wondering what you did wrong.</p>
+      <p><strong>You didn't do anything wrong.</strong> You were soft and open with me, and I answered that with silence. That's on me, not on you for feeling too much.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">What I'm actually promising</span>
+      <h2>Not "I'll be better." Specific things.</h2>
+      <ul class="promises">
+        <li>
+          <div class="flame"></div>
+          <span><strong>I'll say "I need space" instead of vanishing.</strong> A short message beats silence, every time.</span>
+        </li>
+        <li>
+          <div class="flame"></div>
+          <span><strong>I won't make you chase me to know I'm okay.</strong> Checking in doesn't have to wait until I've fully recovered.</span>
+        </li>
+        <li>
+          <div class="flame"></div>
+          <span><strong>I'll work on the low itself</strong> — not just hiding it better, but actually dealing with what's underneath it.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="boundary">
+    <div class="wrap">
+      <span class="eyebrow">About the boundary you asked for</span>
+      <h2>You're right to want it. I'm not going to talk you out of it.</h2>
+      <p>You said you're sensitive and soft, and that this made you vulnerable to being hurt by me. That's not something to apologize for or protect yourself less of. If anything, it means I need to be more careful with you, not less.</p>
+      <blockquote>Whatever boundary keeps you safe from being hurt like this again — I'll respect it, even if it's uncomfortable for me.</blockquote>
+      <p>This page isn't asking you to forget it or drop it. It's just me telling you, honestly, that I see what I did.</p>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <span class="eyebrow">Farha</span>
+      <h2>I'm sorry. And I'm here — even on the quiet days now.</h2>
+      <p class="signature">— always, even when I go quiet, yours</p>
+
+      <div class="relight">
+        <div class="window" id="relightWindow"><div class="glow" id="relightGlow"></div></div>
+        <span class="relight-label" id="relightLabel">tap the window</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>made with a lot of thinking about you</footer>
+
+<script>
+  const w = document.getElementById('relightWindow');
+  const g = document.getElementById('relightGlow');
+  const label = document.getElementById('relightLabel');
+  let lit = false;
+  w.addEventListener('click', () => {
+    lit = !lit;
+    g.style.setProperty('--lit', lit ? 1 : 0);
+    label.textContent = lit ? 'the light stays on' : 'tap the window';
+  });
+</script>
+</body>
+</html>
