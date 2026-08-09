@@ -3,58 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Girlfriend Day, Farha</title>
+<title>For Farha</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream: #fff6f0;
-    --peach: #ffd9c2;
-    --coral: #ff9d80;
-    --mauve: #c98ea3;
-    --plum-text: #4a2f3a;
-    --soft-white: #fffcfa;
+    --clay: #5c3d3a;
+    --clay-dark: #3d2624;
+    --sand: #ece2d6;
+    --sand-warm: #f4eadd;
+    --gold: #c99a5b;
+    --gold-soft: #e3c68f;
+    --rose-dust: #c98a82;
+    --paper: #fbf6ef;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    background: var(--cream);
-    color: var(--plum-text);
-    font-family:'Quicksand', sans-serif;
-    font-weight:500;
-    line-height:1.7;
-    overflow-x:hidden;
+    background: var(--paper);
+    color: var(--clay-dark);
+    font-family:'Work Sans', sans-serif;
+    font-weight:300;
+    line-height:1.75;
   }
   h1,h2{
     font-family:'Fraunces', serif;
     font-weight:500;
   }
   .wrap{max-width:600px; margin:0 auto; padding:0 26px;}
-
-  /* floating hearts background */
-  .hearts{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-    overflow:hidden;
-  }
-  .heart{
-    position:absolute;
-    bottom:-40px;
-    font-size:1.4rem;
-    opacity:0.5;
-    animation: float 12s linear infinite;
-    color: var(--coral);
-  }
-  @keyframes float{
-    0%{ transform:translateY(0) rotate(0deg); opacity:0; }
-    10%{ opacity:0.5; }
-    90%{ opacity:0.4; }
-    100%{ transform:translateY(-110vh) rotate(25deg); opacity:0; }
-  }
-
-  section, .hero{ position:relative; z-index:1; }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -65,258 +41,167 @@
     justify-content:center;
     text-align:center;
     padding:60px 26px;
-    background: radial-gradient(ellipse at 50% 20%, var(--peach) 0%, var(--cream) 60%);
+    background: radial-gradient(ellipse at 50% 25%, var(--sand) 0%, var(--paper) 65%);
   }
   .eyebrow{
     display:block;
-    font-size:0.75rem;
-    letter-spacing:0.2em;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
     text-transform:uppercase;
-    color:var(--mauve);
-    margin-bottom:16px;
-    font-weight:600;
+    color:var(--rose-dust);
+    margin-bottom:20px;
   }
-  .badge{
-    display:inline-block;
-    background: var(--soft-white);
-    border:1.5px solid var(--peach);
-    border-radius:999px;
-    padding:6px 18px;
-    font-size:0.8rem;
-    color:var(--coral);
-    font-weight:600;
-    margin-bottom:26px;
-    box-shadow:0 4px 14px rgba(255,157,128,0.18);
+  .candle{
+    width:6px;
+    height:60px;
+    background: linear-gradient(var(--gold-soft), var(--gold));
+    border-radius:3px;
+    margin:0 auto 4px;
+    position:relative;
+  }
+  .flame{
+    width:14px; height:20px;
+    background: radial-gradient(circle at 50% 70%, var(--gold-soft) 0%, var(--gold) 55%, transparent 80%);
+    border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+    position:absolute;
+    top:-16px; left:50%;
+    transform:translateX(-50%);
+    animation: flicker 2.4s ease-in-out infinite;
+  }
+  @keyframes flicker{
+    0%,100%{ transform:translateX(-50%) scale(1) rotate(0deg); opacity:0.95; }
+    50%{ transform:translateX(-50%) scale(1.08) rotate(-2deg); opacity:0.8; }
   }
   .hero h1{
-    font-size:clamp(2rem, 7vw, 3rem);
-    max-width:12ch;
-    color:var(--plum-text);
-    margin-bottom:18px;
+    font-size:clamp(1.9rem, 6vw, 2.7rem);
+    max-width:13ch;
+    margin:34px 0 20px;
+    color:var(--clay-dark);
   }
-  .hero h1 em{
-    font-style:italic;
-    color:var(--coral);
-  }
+  .hero h1 em{ font-style:italic; color:var(--rose-dust); }
   .hero p.sub{
-    max-width:34ch;
-    color:#7a5a68;
+    max-width:36ch;
+    color:#7a5f56;
     font-size:1.02rem;
-    font-weight:400;
-  }
-  .big-heart{
-    margin-top:36px;
-    font-size:2.6rem;
-    color:var(--coral);
-    animation: beat 1.6s ease-in-out infinite;
-  }
-  @keyframes beat{
-    0%,100%{ transform:scale(1); }
-    15%{ transform:scale(1.15); }
-    30%{ transform:scale(1); }
   }
   .scroll-cue{
-    position:absolute;
-    bottom:32px;
-    font-size:0.7rem;
-    letter-spacing:0.15em;
-    text-transform:uppercase;
-    color:var(--mauve);
-    opacity:0.7;
+    position:absolute; bottom:32px;
+    font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase;
+    color:var(--rose-dust); opacity:0.6;
   }
+  .hero{ position:relative; }
 
   /* ---------- SECTIONS ---------- */
-  section{ padding:80px 0; }
-  section .eyebrow{ margin-bottom:10px; }
-  section h2{
-    font-size:clamp(1.4rem, 4vw, 1.8rem);
-    margin-bottom:22px;
-  }
-  section p{
-    color:#6e4f5c;
-    font-weight:400;
-    font-size:1.02rem;
-    margin-bottom:14px;
-  }
+  section{ padding:80px 0; border-top:1px solid #e6d9c8; }
+  section .eyebrow{ color:var(--gold); }
+  section h2{ font-size:clamp(1.35rem, 4vw, 1.75rem); margin-bottom:22px; }
+  section p{ color:#6b544c; font-size:1.02rem; margin-bottom:16px; }
+  section p:last-child{ margin-bottom:0; }
+  strong{ color:var(--clay-dark); font-weight:500; }
 
-  /* reasons grid */
-  .reasons{
-    display:grid;
-    gap:16px;
-    margin-top:28px;
-  }
-  .reason{
-    background: var(--soft-white);
-    border:1.5px solid #ffe4d4;
+  .gratitude-block{
+    background: var(--sand);
     border-radius:18px;
-    padding:20px 22px;
-    display:flex;
-    gap:14px;
-    align-items:flex-start;
-    box-shadow: 0 6px 18px rgba(201,142,163,0.08);
+    padding:30px 26px;
+    margin-top:26px;
   }
-  .reason .num{
+  .gratitude-block p{ color:#5c463f; }
+  .gratitude-block p:first-child{
     font-family:'Fraunces', serif;
     font-style:italic;
-    color:var(--coral);
-    font-size:1.3rem;
-    flex-shrink:0;
-  }
-  .reason p{ margin:0; font-size:0.98rem; }
-
-  /* flip cards */
-  .cards-hint{
-    text-align:center;
-    font-size:0.85rem;
-    color:var(--mauve);
-    margin-bottom:22px;
-  }
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:14px;
-  }
-  .card{
-    aspect-ratio:1/1.15;
-    perspective:800px;
-    cursor:pointer;
-  }
-  .card-inner{
-    position:relative;
-    width:100%; height:100%;
-    transition:transform 0.6s cubic-bezier(.4,.2,.2,1);
-    transform-style:preserve-3d;
-  }
-  .card.flipped .card-inner{ transform:rotateY(180deg); }
-  .card-face{
-    position:absolute; inset:0;
-    display:flex; align-items:center; justify-content:center;
-    border-radius:16px;
-    backface-visibility:hidden;
-    padding:10px;
-    text-align:center;
-  }
-  .card-front{
-    background: linear-gradient(155deg, var(--peach), var(--coral));
-    font-size:1.6rem;
-  }
-  .card-back{
-    background: var(--soft-white);
-    border:1.5px solid var(--peach);
-    transform:rotateY(180deg);
-    font-size:0.78rem;
-    color:var(--plum-text);
-    font-weight:600;
-    line-height:1.4;
+    font-size:1.15rem;
+    color:var(--clay);
+    margin-bottom:18px;
   }
 
-  /* closing */
-  .closing{
-    text-align:center;
-    padding-bottom:110px;
+  .promises{
+    list-style:none;
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
   }
-  .closing h2{ max-width:15ch; margin:0 auto 18px; }
+  .promises li{ display:flex; gap:16px; align-items:flex-start; }
+  .dot{
+    flex-shrink:0; width:8px; height:8px; border-radius:50%;
+    background: var(--gold); margin-top:9px;
+  }
+  .promises strong{ display:block; margin-bottom:3px; }
+  .promises span{ color:#6b544c; font-size:1.02rem; }
+
+  .closing{ text-align:center; padding-bottom:110px; }
+  .closing h2{ max-width:16ch; margin:0 auto 18px; }
   .signature{
-    margin-top:36px;
+    margin-top:40px;
     font-family:'Fraunces', serif;
     font-style:italic;
     font-size:1.25rem;
-    color:var(--coral);
+    color:var(--rose-dust);
   }
 
   footer{
-    text-align:center;
-    padding:30px 0 44px;
-    font-size:0.72rem;
-    letter-spacing:0.06em;
-    color:#c7a2ae;
-    position:relative; z-index:1;
+    text-align:center; padding:30px 0 44px;
+    font-size:0.72rem; letter-spacing:0.06em; color:#c2ab9a;
   }
 
   @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    .heart, .big-heart{ animation:none; }
+    html{ scroll-behavior:auto; }
+    .flame{ animation:none; }
   }
 </style>
 </head>
 <body>
 
-<div class="hearts" id="hearts"></div>
-
   <div class="hero">
-    <span class="eyebrow">World Girlfriend Day</span>
-    <span class="badge">for Farha 🤍</span>
-    <h1>The best part of my day is still <em>you.</em></h1>
-    <p class="sub">A tiny page just to say happy girlfriend day — and to remind you why I'm lucky to have you.</p>
-    <div class="big-heart">♥</div>
+    <span class="eyebrow">for Farha</span>
+    <div class="candle"><div class="flame"></div></div>
+    <h1>Thank you for staying, <em>even when I gave you every reason not to.</em></h1>
+    <p class="sub">This isn't a page to make things cute again. It's just me, saying thank you, and meaning it with everything I have.</p>
     <span class="scroll-cue">↓ scroll ↓</span>
   </div>
 
   <section>
     <div class="wrap">
-      <span class="eyebrow">Why you</span>
-      <h2>A few reasons, off the top of my head</h2>
-      <div class="reasons">
-        <div class="reason"><span class="num">01</span><p>The way you feel things so fully — it's one of my favorite things about you, even on the days it's hard for both of us.</p></div>
-        <div class="reason"><span class="num">02</span><p>You still show up for me, even when I've made that harder than it should be.</p></div>
-        <div class="reason"><span class="num">03</span><p>You tell me the truth about how I've hurt you instead of just quietly disappearing. That takes more courage than it gets credit for.</p></div>
-        <div class="reason"><span class="num">04</span><p>Being around you makes ordinary days feel like they're worth remembering.</p></div>
+      <span class="eyebrow">What I know</span>
+      <h2>I hurt you in ways that weren't small.</h2>
+      <p>I lied to you. I kept parts of my past from you that you deserved to know. And I did something that broke the most basic trust between us. There's no version of this page that makes that okay, and I'm not trying to write one.</p>
+      <p><strong>You forgave me anyway.</strong> That wasn't owed to me. I know that.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">What that means to me</span>
+      <div class="gratitude-block">
+        <p>"I don't fully understand how you found it in yourself to stay after everything I put you through."</p>
+        <p>You didn't have to give me another chance. The fact that you did isn't something I'm going to treat lightly, or take as proof that I'm forgiven for good. I know trust like this comes back slowly, if at all, and only through what I actually do — not what I say on a webpage.</p>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <span class="eyebrow">Tap to open</span>
-      <h2>A few small notes for you</h2>
-      <p class="cards-hint">(tap each heart)</p>
-      <div class="cards" id="cards">
-        <div class="card"><div class="card-inner">
-          <div class="card-face card-front">♥</div>
-          <div class="card-face card-back">You're the softest, warmest person I know.</div>
-        </div></div>
-        <div class="card"><div class="card-inner">
-          <div class="card-face card-front">♥</div>
-          <div class="card-face card-back">I don't say thank you enough for how patient you are with me.</div>
-        </div></div>
-        <div class="card"><div class="card-inner">
-          <div class="card-face card-front">♥</div>
-          <div class="card-face card-back">Happy Girlfriend Day. I'm genuinely trying to be someone worthy of you.</div>
-        </div></div>
-      </div>
+      <span class="eyebrow">What I owe you now</span>
+      <h2>Not promises. Practice.</h2>
+      <ul class="promises">
+        <li><div class="dot"></div><span><strong>Full honesty, even when it's uncomfortable.</strong> No more managing what you know to protect myself.</span></li>
+        <li><div class="dot"></div><span><strong>Patience with your doubt.</strong> If you need reassurance, or need to ask something twice, that's fair — I did that to us.</span></li>
+        <li><div class="dot"></div><span><strong>Actually telling you the long story</strong> — not editing it to look better, just the truth of it.</span></li>
+        <li><div class="dot"></div><span><strong>Getting real help if I need it</strong>, so this isn't just willpower carrying the weight.</span></li>
+      </ul>
     </div>
   </section>
 
   <section class="closing">
     <div class="wrap">
       <span class="eyebrow">Farha</span>
-      <h2>Happy World Girlfriend Day, love.</h2>
-      <p>You deserve a whole day just for you — and honestly, more than that.</p>
-      <p class="signature">— yours, today and every day</p>
+      <h2>Thank you for giving me the chance to earn this back.</h2>
+      <p>I won't waste it.</p>
+      <p class="signature">— yours, honestly, from here on</p>
     </div>
   </section>
 
-  <footer>made with you in mind</footer>
+  <footer>made with more humility than usual</footer>
 
-<script>
-  // floating hearts
-  const heartsEl = document.getElementById('hearts');
-  const symbols = ['♥','♡'];
-  for(let i=0;i<16;i++){
-    const h = document.createElement('div');
-    h.className = 'heart';
-    h.textContent = symbols[Math.floor(Math.random()*symbols.length)];
-    h.style.left = Math.random()*100 + 'vw';
-    h.style.animationDuration = (9 + Math.random()*8) + 's';
-    h.style.animationDelay = (Math.random()*12) + 's';
-    h.style.fontSize = (1 + Math.random()*1.2) + 'rem';
-    heartsEl.appendChild(h);
-  }
-
-  // flip cards
-  document.querySelectorAll('.card').forEach(card=>{
-    card.addEventListener('click', ()=> card.classList.toggle('flipped'));
-  });
-</script>
 </body>
 </html>
